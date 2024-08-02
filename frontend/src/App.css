@@ -1,0 +1,80 @@
+/* 
+.navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+ .para{
+  text-align: center;
+ }
+ .form1{
+  position: absolute;
+  height: max-content;
+  width:400px ;
+left: 40%;
+  background-color: burlywood;
+ }
+ .form1 form{
+  margin-top: 20px;
+  padding-left: 30px;
+  background-color: violet;
+ }
+ .pic{
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  background-size: cover;  
+ }
+ .close{
+  position: absolute;
+  right: 0%;
+  cursor: pointer;
+ }
+ .vlog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .card{
+  position: relative;
+
+
+ }
+ .card .deleteicon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+ }
+ .updateform{
+  position: relative;
+  background-color: cadetblue;
+  height: 500px;
+  width: 500px;
+  
+  padding-left: 30px;
+  padding-top: 30px;
+
+ }
+ .form{
+  position: absolute;
+  background-color: brown;
+  min-height: max-content;
+  width: 400px;
+  padding-left: 20px;
+ }
+ .updateform{
+  position: relative;
+
+ }
+ .close{
+  position: absolute;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 20px;
+
+ }
+ .close :hover{
+  color: red;
+ }
