@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { MdClose } from "react-icons/md";
 import UserContext from '../context/UserContext';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -56,6 +57,9 @@ const fetchAllposts = async ()=>{
   
   }
 }
+// const handledetails = (ans) =>{
+//   console.log(ans)
+// }
   return (
    <div className='row'>
     <div className='col-2 bg-warning'>
@@ -70,7 +74,7 @@ const fetchAllposts = async ()=>{
 <div className="card-body">
   <h5 className="card-title">Title:{ele. title}</h5>
   <p className="card-text">Author:{ele.author.name}</p>
-  <a href="#" className="btn btn-primary"> view deatails</a>
+  <Link to={'/ViewDetails'} className="btn btn-primary" state={ele}  > view deatails</Link>
 </div>
 </div>
 

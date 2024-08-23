@@ -11,6 +11,7 @@ import Navbar from './Pages/Navbar';
 import { useContext } from 'react';
 import UserContext from './context/UserContext';
 import Foreget from './Pages/Foreget';
+import ViewDetails from './Pages/ViewDetails';
 function App() {
   let ctx = useContext(UserContext)
   let login =ctx.user.Login
@@ -28,6 +29,7 @@ function App() {
     {login===false &&<Route  path='/Login' element={<Login/>}/>}
     {login ===false &&<Route  path='/signup' element={<Signup/>}/>}
     <Route path='/ForgetPassword' element={<Foreget/>}/>
+    <Route path='/ViewDetails' element={<ViewDetails/>}/>
       </Routes>
       <ToastContainer />
       </BrowserRouter>

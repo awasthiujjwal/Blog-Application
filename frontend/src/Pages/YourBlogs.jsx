@@ -3,6 +3,7 @@ import UserContext from '../context/UserContext';
 import { MdDeleteForever } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 import { FiEdit2 } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 const YourBlogs = () => {
   const [postId, setPostId] = useState("");
   const [yourpost , setyourpost ] = useState([]);
@@ -54,7 +55,7 @@ const handlesubmit = async(e) => {
     reader.readAsDataURL(image);
     reader.onload = async ()=>{
       console.log(reader.result)
-      let res = await fetch (`http://localhost:8080/posts//update/${postId}`,{
+      let res = await fetch (`http://localhost:8080/posts/update/${postId}`,{
        method:"PUT",
        headers:{
         "content-type":"application/json"
@@ -95,6 +96,7 @@ const handleEdit = (ans)=>{
   setPostId(ans._id)
 
 }
+
   return (
     <div className='vlog'>
        {yourpost.map((ele)=>{
@@ -105,7 +107,8 @@ const handleEdit = (ans)=>{
     <h5 className="card-title">Tiltle:{ele. title}</h5>
     <p className="card-text">author:{ele.author.name}</p>
    
-    <a href="#" className="btn btn-primary">VIEW DEATILS</a>
+    {/* <Link to={'/ViewDetails'} state={ele} className="btn btn-primary">VIEW DEATILS</Link> */}
+    <button className='btn btn-success'>Edit</button>
     <FiEdit2  onClick={()=>handleEdit(ele)} color='green' />
     <MdDeleteForever onClick={()=>handledelete(ele)} size={"30"} color='red' className='deleteicon' />
   </div>
