@@ -15,7 +15,7 @@ const Home = () => {
   let descriptionref = useRef ()
 const fetchAllposts = async ()=>{
     
-    let res = await fetch ('http://localhost:8080/posts/allpost');
+    let res = await fetch ('https://blog-application-moth.onrender.com/posts/allpost');
     let data = await res.json();
     console.log(data.posts)
     setposts(data.posts)
@@ -42,7 +42,7 @@ const fetchAllposts = async ()=>{
     console.log(titleref.current.value)
     console.log(descriptionref.current.value)
     console.log(ctx.user.id)
-    let res = await fetch('http://localhost:8080/posts/create',{
+    let res = await fetch('https://blog-application-moth.onrender.com/posts/create',{
       method:"POST",
       headers:{
         'content-type':"application/json"

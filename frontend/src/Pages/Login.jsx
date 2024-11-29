@@ -19,7 +19,7 @@ const Login = () => {
       password:passwordRef.current.value
     }
     console.log(obj)
-    let res = await fetch('http://localhost:8080/users/login',{
+    let res = await fetch('https://blog-application-moth.onrender.com/users/login',{
       method: 'POST',
       headers: {
         'content-type' : 'application/json'

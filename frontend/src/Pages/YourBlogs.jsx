@@ -16,7 +16,7 @@ const YourBlogs = () => {
   let contentRef = useRef();
   
  async function xyz(){
-  let res = await fetch(`http://localhost:8080/posts/getpost/${id}`,{
+  let res = await fetch(`https://blog-application-moth.onrender.com/posts/getpost/${id}`,{
     method:"GET",
     headers:{
       'content-type':'application/json',
@@ -34,7 +34,7 @@ useEffect (()=>{
 const handledelete = async (ans)=>{
 console.log(ans)
 console.log(ans._id)
- let res = await fetch (`http://localhost:8080/posts/deletepost/${ans._id}`,{
+ let res = await fetch (`https://blog-application-moth.onrender.com/posts/deletepost/${ans._id}`,{
   method:'DELETE'
  })
  let data = await res.json();
@@ -55,7 +55,7 @@ const handlesubmit = async(e) => {
     reader.readAsDataURL(image);
     reader.onload = async ()=>{
       console.log(reader.result)
-      let res = await fetch (`http://localhost:8080/posts/update/${postId}`,{
+      let res = await fetch (`https://blog-application-moth.onrender.com/posts/update/${postId}`,{
        method:"PUT",
        headers:{
         "content-type":"application/json"
@@ -74,7 +74,7 @@ const handlesubmit = async(e) => {
     }
   }
   else{
-    let res = await fetch (`http://localhost:8080/posts/update/${postId}`,{
+    let res = await fetch (`https://blog-application-moth.onrender.com/posts/update/${postId}`,{
       method:"PUT",
       headers:{
        "content-type":"application/json"
